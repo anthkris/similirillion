@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Similirillion
+
+A tiny, responsive game for deliberate practice identifying similes and metaphors. Made with ReactJS.
+
+Learn more about the creation here:
 
 ## Available Scripts
 

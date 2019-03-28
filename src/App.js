@@ -10,6 +10,7 @@ import lostEmoji from './images/lostEmoji.js';
 import './App.css';
 import Sentences from './components/sentences.js';
 import 'confetti-js';
+import 'typeface-muli';
 
 /* Main Game State */
 const Game = (props) => {
