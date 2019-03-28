@@ -1,0 +1,229 @@
+:root {
+  --main-bg-color: #354657;
+  --text-color: #F2F2F2;
+  --fantasy-pink: #DD9198;
+  --fantasy-purple: #A080AC;
+  --tree-green: #366E53;
+  --deep-sky-blue: #46709D;
+  --grass-green: #81d028;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--text-color);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  height: 100%;
+  font-size: 18px;
+}
+
+.App-logo {
+  height: 50px;
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+#confetti-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+/* From: https://fabriceleven.com/design/creating-fancy-css3-fade-in-animations-on-page-load/ */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
+  animation-delay: 5s;
+}
+
+@keyframes panning {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 25% 0%;
+  }
+   50% {
+    background-position: 50% 0%;
+  }
+  75% {
+    background-position: 75% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.full-height {
+  height: 100%;
+}
+
+.instructions {
+  background: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.instructions .game-container {
+  width: 100%;
+
+}
+
+.instructions .game-container h1,
+.instructions .game-container p {
+  padding: 1em;
+}
+
+.instructions .game-container h1 {
+  font-size: 1.6em;
+  margin-bottom: 0;
+}
+
+.instructions .game-container .game-button {
+  background: var(--deep-sky-blue);
+  color: var(--text-color);
+  border-color: #213446;
+  max-width: 300px;
+}
+
+.instruction-bg {
+  margin-top: auto;
+  object-fit: cover;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./images/castleBG.svg');
+  animation: panning 5s 1 linear;
+  animation-fill-mode: forwards;
+}
+
+.splash-logo {
+
+}
+
+.header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.main-question {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+.Game {
+  background: var(--main-bg-color);
+  color: var(--text-color);
+  height: 100%;
+  margin: 0 auto;
+}
+
+.game-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.help {
+  background: var(--text-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--main-bg-color);
+  border: none;
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sentence {
+  font-size: 2em;
+  padding: 1rem;
+  font-weight: bold;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.game-button {
+  color: var(--main-bg-color);
+  font-weight: bold;
+  background: var(--fantasy-pink);
+  border-radius: 50px;
+  border: solid 3px var(--text-color);
+  font-size: 1.3em;
+  padding: 0.7rem;
+  min-width: 250px;
+  margin-bottom: 20px;
+  z-index: 1000;
+}
+
+.feedback-image {
+  border-radius: 50%;
+}
+
+.feedback {
+  padding: 0 1em;
+}
+
+.game-button:hover,
+.game-button:focus {
+  background: var(--grass-green);
+}
+
+@media (min-width: 768px) {
+  .button-container :first-child {
+    margin-right: 30px;
+  }
+
+  .instructions .game-container {
+    width: 50%;
+  }
+}
