@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="374" height="225.351" viewBox="0 0 374 225.351">
+  <style type="text/css">
+   <![CDATA[
+    @font-face {
+        font-family: Muli;
+        src: url('https://fonts.googleapis.com/css?family=Muli:400,700');
+    }
+   ]]>
+ </style>
   <g id="Grupo_19" data-name="Grupo 19" transform="translate(-1 -434.649)">
     <text id="Similirillion:_Simile_vs_Metaphor" data-name="Similirillion: 
 Simile vs Metaphor" transform="translate(1 447)" fill="#f2f2f2" font-size="56" font-family="Muli-Bold, Muli" font-weight="700"><tspan x="33.868" y="56">Similirillion: </tspan><tspan x="69.82" y="126">Simile vs </tspan><tspan x="58.312" y="196">Metaphor</tspan></text>

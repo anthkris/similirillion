@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
-import logo from './images/Similirillion.svg';
+import logo from './images/Similirillion_small.svg';
 import instructionBG from './images/instructionBG.svg';
-import logoSplash from './images/logoSplash.svg';
+import logoSplash from './images/Similirillion.svg';
 import correctFeedback from './images/correctFeedback.js';
 import incorrectFeedback from './images/incorrectFeedback.js';
 import wonEmoji from './images/wonEmoji.js';
